@@ -1,0 +1,67 @@
+/* properties */
+:root {
+    --main-bg-color: #141d2b;
+    --links-default-color: #dd5300;
+    --links-hover-color: #920606;
+    --default-header-color: var(--md-default-fg-color--light);
+    --navigation-active-link-color: var(--links-default-color);
+}
+
+.grid.cards {
+  margin-top: 1rem;
+}
+  
+.grid.cards > ul > li {
+  transition: transform 0.2s ease-in-out;
+}
+  
+.grid.cards > ul > li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+  
+.grid.cards > ul > li > :is(h2, h3) {
+  color: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="default"] {
+  /* header color */
+  --md-primary-bg-color: var(--links-default-color);
+  /* header background color */
+  --md-primary-fg-color: var(--main-bg-color);
+  
+  /* active navigation link color */
+  --md-typeset-a-color: var(--navigation-active-link-color);
+  
+  /* footer font color */
+  --md-accent-fg-color: var(--links-default-color);
+  /* footer metadata font color */
+  --md-footer-fg-color--light: var(--links-default-color);
+  /* footer background color */
+  --md-footer-bg-color: var(--main-bg-color);
+
+}
+
+[data-md-color-scheme="slate"] {
+  /* header color */
+  --md-primary-bg-color: var(--links-default-color);
+  /* header background color */
+  --md-primary-fg-color: var(--main-bg-color);
+
+  /* background color  */
+  --md-default-bg-color: var(--main-bg-color);
+
+  /* active navigation link color */
+  --md-typeset-a-color: var(--navigation-active-link-color);
+  --md-accent-fg-color: var(--links-hover-color);
+
+  /* footer metadata font color */
+  --md-footer-fg-color--light: var(--links-default-color);
+    /* footer background color */
+  --md-footer-bg-color: var(--main-bg-color);
+  
+}
+
+.md-footer {
+    color: var(--links-default-color);
+}
